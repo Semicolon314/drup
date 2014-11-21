@@ -27,9 +27,11 @@ textarea {
     <form id="submit_form" action="/" action="post">
       <textarea placeholder="Paste here."></textarea>
     </form>
+    <script>
+      function submitForm() {
+        document.getElementById("submit_form").submit();
+      }
+    </script>
   </body>
-  <script>
-    document.getElementById("submit_form").submit();
-  </script>
 </html>
 
