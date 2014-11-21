@@ -1,0 +1,25 @@
+{
+  "name": "drup",
+  "version": "0.0.0",
+  "description": "Can you drupload that?",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Semicolon314/drup.git"
+  },
+  "keywords": [
+    "pastebin"
+  ],
+  "author": [
+    "Charles Zinn",
+    "Jim Zhang"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Semicolon314/drup/issues"
+  },
+  "homepage": "https://github.com/Semicolon314/drup"
+}
