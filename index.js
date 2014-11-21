@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var path = require("path");
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({
@@ -18,8 +19,7 @@ app.use(function(req, res, next){
 });
 
 app.get("/", function(req, res) {
-  console.log(req);
-  res.send("Hello from Express!\n");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.post("/", function(req, res) {
