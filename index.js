@@ -43,6 +43,9 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res) {
+  if(req.body.text) {
+    req.text = req.body.text;
+  }
   if(req.text.substring(0, 5) == "text=")
     req.text = req.text.substring(5);
 
