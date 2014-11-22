@@ -57,6 +57,12 @@ app.get("/:filename", function(req, res) {
   var fn = req.params.filename;
   fn = fn.replace(/\W/g, "");
 
+  if(fn == "drup") {
+    res.set('Content-Type', 'text/plain');
+    res.send(fs.readFileSync(path.join(__dirname, "drup")));
+    return;
+  }
+
   console.log(fn);
 
   var full = path.join(__dirname, "db", fn);
