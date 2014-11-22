@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -z $1 ]; then
+    cat - | curl -H "Content-Type:text/plain" --data-binary @- http://mafia.semicolon.ca:5001
+else
+    curl -H "Content-Type:text/plain" --data-binary @$1 http://mafia.semicolon.ca:5001
+fi
