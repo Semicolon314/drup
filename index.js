@@ -23,7 +23,12 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res) {
-  res.send(req.text);
+  if (req.body.text) {
+      res.send(req.body.text);
+  }
+  else {
+      res.send(req.text);
+  }
 });
 
 var server = app.listen(5000, function() {
