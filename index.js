@@ -50,7 +50,7 @@ app.post("/", function(req, res) {
     req.text = req.text.substring(5);
 
   var words = addPaste(req.text);
-  res.send(words);
+  res.send(words + "\n");
 });
 
 app.get("/:filename", function(req, res) {
@@ -63,12 +63,8 @@ app.get("/:filename", function(req, res) {
   if(fs.existsSync(full)) {
     res.set('Content-Type', 'text/plain');
     res.sendFile(full);
-    // fs.readFile(full, function(err, data) {
-    //   if(err) throw err;
-    //   res.send(data);
-    // });
   } else {
-    res.send("no");
+    res.send("no\n");
   }
 });
 
